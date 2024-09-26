@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.User;
@@ -15,6 +16,7 @@ import com.servicio.ParkingControl.BackEnd.Repositories.AdminRepository;
 import com.servicio.ParkingControl.BackEnd.Services.Interfaces.AdminInt;
 
 @Service
+@Primary
 public class AdminImp implements AdminInt, UserDetailsService {
 
     @Autowired
