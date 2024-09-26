@@ -23,7 +23,7 @@ public class AdminImp implements AdminInt {
     }
 
     @Override
-    public Optional<Admin> findById(int id) {
+    public Optional<Admin> findById(Integer id) {
         return adminRepository.findById(id);
     }
 

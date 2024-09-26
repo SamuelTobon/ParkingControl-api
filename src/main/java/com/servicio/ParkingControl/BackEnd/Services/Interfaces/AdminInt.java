@@ -8,7 +8,7 @@ import com.servicio.ParkingControl.BackEnd.Entities.Admin;
 public interface AdminInt {
     public List<Admin> findAll();
 
-    public Optional<Admin> findById(int id);
+    public Optional<Admin> findById(Integer id);
 
     public Admin save(Admin admin);
 
