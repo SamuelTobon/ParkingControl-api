@@ -17,7 +17,7 @@ public class Admin {
 
     @Column(name = "nombre", nullable = false, length = 45)
     @NonNull
-    private String nombre;
+    private String username;
 
     @Column(name = "email", nullable = false, length = 100)
     @NonNull
@@ -35,12 +35,12 @@ public class Admin {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {
