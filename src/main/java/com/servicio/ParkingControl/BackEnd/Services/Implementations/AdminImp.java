@@ -17,7 +17,8 @@ import com.servicio.ParkingControl.BackEnd.Services.Interfaces.AdminInt;
 
 @Service
 @Primary
-public class AdminImp implements AdminInt, UserDetailsService {
+// public class AdminImp implements AdminInt, UserDetailsService {
+public class AdminImp implements AdminInt {
 
     @Autowired
     private AdminRepository adminRepository;
@@ -44,18 +45,21 @@ public class AdminImp implements AdminInt, UserDetailsService {
 
     }
 
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-
-        Optional<Admin> user = adminRepository.findByUsername(username);
-        if (user.isPresent()) {
-            var userObj = user.get();
-            return User.builder()
-                    .username(userObj.getUsername())
-                    .password(userObj.getPassword())
-                    .build();
-        } else {
-            throw new UsernameNotFoundException(username);
-        }
-    }
+    /*
+     * @Override
+     * public UserDetails loadUserByUsername(String username) throws
+     * UsernameNotFoundException {
+     * 
+     * Optional<Admin> user = adminRepository.findByUsername(username);
+     * if (user.isPresent()) {
+     * var userObj = user.get();
+     * return User.builder()
+     * .username(userObj.getUsername())
+     * .password(userObj.getPassword())
+     * .build();
+     * } else {
+     * throw new UsernameNotFoundException(username);
+     * }
+     * }
+     */
 }

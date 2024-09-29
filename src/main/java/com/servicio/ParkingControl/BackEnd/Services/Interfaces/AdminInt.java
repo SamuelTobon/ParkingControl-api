@@ -17,6 +17,9 @@ public interface AdminInt {
 
     public void delete(Integer id);
 
-    UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
+    /*
+     * UserDetails loadUserByUsername(String username) throws
+     * UsernameNotFoundException;
+     */
 
 }
