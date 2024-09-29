@@ -40,4 +40,9 @@ public class AdminImp implements AdminInt {
 
     }
 
+    @Override
+    public Optional<Admin> login(String username, String password) {
+        return adminRepository.findByUsernameAndPassword(username, password);
+    }
+
 }

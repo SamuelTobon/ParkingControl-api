@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.servicio.ParkingControl.BackEnd.Entities.Admin;
 import com.servicio.ParkingControl.BackEnd.Services.Interfaces.AdminInt;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 
 @RestController
 @RequestMapping("/api/administradores")
@@ -64,6 +65,12 @@ public class AdminController {
             return ResponseEntity.ok(admin);
         }
         return ResponseEntity.ok().build();
+    }
+
+    @CrossOrigin(origins = "*")
+    @PatchMapping
+    public ResponseEntity<?> loginUser(@RequestBody Admin admin) {
+        return ResponseEntity.ok(adminService.login(admin.getUsername(), admin.getPassword()));
     }
 
 }

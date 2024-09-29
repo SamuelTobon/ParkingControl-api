@@ -14,4 +14,6 @@ public interface AdminInt {
 
     public void delete(Integer id);
 
+    public Optional<Admin> login(String username, String password);
+
 }
